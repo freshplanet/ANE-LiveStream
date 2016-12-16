@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		162665351DEF73D10059128C /* FPANEUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 162665341DEF73D10059128C /* FPANEUtils.m */; };
+		162665371DEF73EA0059128C /* AirLiveStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 162665361DEF73EA0059128C /* AirLiveStream.m */; };
+		1661AA6A1E008ADB0052CF26 /* BroadcastMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1661AA691E008ADB0052CF26 /* BroadcastMenuViewController.m */; };
+		16D87A381DDF6EAE005D8AEA /* AirLiveStream.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16D87A371DDF6EAE005D8AEA /* AirLiveStream.h */; };
+		16D87A411DDF6F1F005D8AEA /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D87A401DDF6F1F005D8AEA /* ReplayKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		16D87A321DDF6EAE005D8AEA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				16D87A381DDF6EAE005D8AEA /* AirLiveStream.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		162665341DEF73D10059128C /* FPANEUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPANEUtils.m; sourceTree = "<group>"; };
+		162665361DEF73EA0059128C /* AirLiveStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirLiveStream.m; sourceTree = "<group>"; };
+		1661AA681E008ADB0052CF26 /* BroadcastMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BroadcastMenuViewController.h; sourceTree = "<group>"; };
+		1661AA691E008ADB0052CF26 /* BroadcastMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BroadcastMenuViewController.m; sourceTree = "<group>"; };
+		16D87A341DDF6EAE005D8AEA /* libAirLiveStream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAirLiveStream.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		16D87A371DDF6EAE005D8AEA /* AirLiveStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirLiveStream.h; sourceTree = "<group>"; };
+		16D87A401DDF6F1F005D8AEA /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		16D87A421DDF7074005D8AEA /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+		16D87A441DDF70EB005D8AEA /* FPANEUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPANEUtils.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16D87A311DDF6EAE005D8AEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D87A411DDF6F1F005D8AEA /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16D87A2B1DDF6EAE005D8AEA = {
+			isa = PBXGroup;
+			children = (
+				16D87A431DDF70D5005D8AEA /* Frameworks */,
+				16D87A361DDF6EAE005D8AEA /* AirLiveStream */,
+				16D87A351DDF6EAE005D8AEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16D87A351DDF6EAE005D8AEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16D87A341DDF6EAE005D8AEA /* libAirLiveStream.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16D87A361DDF6EAE005D8AEA /* AirLiveStream */ = {
+			isa = PBXGroup;
+			children = (
+				16D87A421DDF7074005D8AEA /* FlashRuntimeExtensions.h */,
+				16D87A441DDF70EB005D8AEA /* FPANEUtils.h */,
+				162665341DEF73D10059128C /* FPANEUtils.m */,
+				16D87A371DDF6EAE005D8AEA /* AirLiveStream.h */,
+				162665361DEF73EA0059128C /* AirLiveStream.m */,
+				1661AA681E008ADB0052CF26 /* BroadcastMenuViewController.h */,
+				1661AA691E008ADB0052CF26 /* BroadcastMenuViewController.m */,
+			);
+			path = AirLiveStream;
+			sourceTree = "<group>";
+		};
+		16D87A431DDF70D5005D8AEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16D87A401DDF6F1F005D8AEA /* ReplayKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16D87A331DDF6EAE005D8AEA /* AirLiveStream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16D87A3D1DDF6EAE005D8AEA /* Build configuration list for PBXNativeTarget "AirLiveStream" */;
+			buildPhases = (
+				16D87A301DDF6EAE005D8AEA /* Sources */,
+				16D87A311DDF6EAE005D8AEA /* Frameworks */,
+				16D87A321DDF6EAE005D8AEA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirLiveStream;
+			productName = AirLiveStream;
+			productReference = 16D87A341DDF6EAE005D8AEA /* libAirLiveStream.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16D87A2C1DDF6EAE005D8AEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Freshplanet, Inc.";
+				TargetAttributes = {
+					16D87A331DDF6EAE005D8AEA = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 16D87A2F1DDF6EAE005D8AEA /* Build configuration list for PBXProject "AirLiveStream" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 16D87A2B1DDF6EAE005D8AEA;
+			productRefGroup = 16D87A351DDF6EAE005D8AEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16D87A331DDF6EAE005D8AEA /* AirLiveStream */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16D87A301DDF6EAE005D8AEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1661AA6A1E008ADB0052CF26 /* BroadcastMenuViewController.m in Sources */,
+				162665371DEF73EA0059128C /* AirLiveStream.m in Sources */,
+				162665351DEF73D10059128C /* FPANEUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		16D87A3B1DDF6EAE005D8AEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		16D87A3C1DDF6EAE005D8AEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16D87A3E1DDF6EAE005D8AEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirLiveStream/AirLiveStream-Prefix.pch";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		16D87A3F1DDF6EAE005D8AEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirLiveStream/AirLiveStream-Prefix.pch";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16D87A2F1DDF6EAE005D8AEA /* Build configuration list for PBXProject "AirLiveStream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D87A3B1DDF6EAE005D8AEA /* Debug */,
+				16D87A3C1DDF6EAE005D8AEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16D87A3D1DDF6EAE005D8AEA /* Build configuration list for PBXNativeTarget "AirLiveStream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D87A3E1DDF6EAE005D8AEA /* Debug */,
+				16D87A3F1DDF6EAE005D8AEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16D87A2C1DDF6EAE005D8AEA /* Project object */;
+}

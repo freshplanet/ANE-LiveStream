@@ -1,0 +1,9 @@
+<platform xmlns="http://ns.adobe.com/air/extension/22.0">
+    <sdkVersion>9.0</sdkVersion>
+    <linkerOptions>
+        <option>-weak_framework ReplayKit</option>
+        <option>-ObjC</option>
+    </linkerOptions>
+    <packagedDependencies>
+    </packagedDependencies>
+</platform>
