@@ -59,13 +59,9 @@ package com.freshplanet.ane.AirLiveStream {
             return _call("isMicrophoneEnabled");
         }
 
-//        public function setIsMicrophoneEnabled(b:Boolean):void {
-//
-//            if (b)
-//                _call("");
-//            else
-//                _call("")
-//        }
+        public function setIsMicrophoneEnabled(enabled:Boolean):void {
+            _call("setIsMicrophoneEnabled", enabled);
+        }
 
         /**
          *
@@ -101,12 +97,21 @@ package com.freshplanet.ane.AirLiveStream {
             this.dispatchEvent(new AirLiveStreamEvent(event.code));
         }
 
-        private function _call(functionName:String):* {//, ...vars):* { // todo
+        private function _call(functionName:String, ...vars):* {
 
             if (!_context)
                 return false;
 
-            var ret:Object = _context.call(functionName);
+            var ret:Object = null;
+
+            if (!vars || vars.length == 0)
+                ret = _context.call(functionName);
+            else {
+
+                vars.unshift(functionName);
+                ret = _context.call.apply(null, vars);
+            }
+
             if (ret is Error)
                 throw ret;
 
