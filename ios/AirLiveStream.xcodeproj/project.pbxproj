@@ -12,6 +12,7 @@
 		1661AA6A1E008ADB0052CF26 /* BroadcastMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1661AA691E008ADB0052CF26 /* BroadcastMenuViewController.m */; };
 		16D87A381DDF6EAE005D8AEA /* AirLiveStream.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16D87A371DDF6EAE005D8AEA /* AirLiveStream.h */; };
 		16D87A411DDF6F1F005D8AEA /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D87A401DDF6F1F005D8AEA /* ReplayKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6447ACD2FA401CB67C647419 /* libPods-AirLiveStream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 885364F12DBF1076D7B05B04 /* libPods-AirLiveStream.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,15 +29,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		162665341DEF73D10059128C /* FPANEUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPANEUtils.m; sourceTree = "<group>"; };
+		162665341DEF73D10059128C /* FPANEUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPANEUtils.m; path = AirLiveStream/FPANEUtils.m; sourceTree = "<group>"; };
 		162665361DEF73EA0059128C /* AirLiveStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirLiveStream.m; sourceTree = "<group>"; };
 		1661AA681E008ADB0052CF26 /* BroadcastMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BroadcastMenuViewController.h; sourceTree = "<group>"; };
 		1661AA691E008ADB0052CF26 /* BroadcastMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BroadcastMenuViewController.m; sourceTree = "<group>"; };
 		16D87A341DDF6EAE005D8AEA /* libAirLiveStream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAirLiveStream.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D87A371DDF6EAE005D8AEA /* AirLiveStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirLiveStream.h; sourceTree = "<group>"; };
 		16D87A401DDF6F1F005D8AEA /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
-		16D87A421DDF7074005D8AEA /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
-		16D87A441DDF70EB005D8AEA /* FPANEUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPANEUtils.h; sourceTree = "<group>"; };
+		16D87A421DDF7074005D8AEA /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlashRuntimeExtensions.h; path = AirLiveStream/FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+		16D87A441DDF70EB005D8AEA /* FPANEUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPANEUtils.h; path = AirLiveStream/FPANEUtils.h; sourceTree = "<group>"; };
+		885364F12DBF1076D7B05B04 /* libPods-AirLiveStream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirLiveStream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ABAA0C8B5996CD9CB1BD22F /* Pods-AirLiveStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirLiveStream.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirLiveStream/Pods-AirLiveStream.release.xcconfig"; sourceTree = "<group>"; };
+		EDC61C8B11679BAF049868B5 /* Pods-AirLiveStream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirLiveStream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirLiveStream/Pods-AirLiveStream.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16D87A411DDF6F1F005D8AEA /* ReplayKit.framework in Frameworks */,
+				6447ACD2FA401CB67C647419 /* libPods-AirLiveStream.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,9 +59,13 @@
 		16D87A2B1DDF6EAE005D8AEA = {
 			isa = PBXGroup;
 			children = (
-				16D87A431DDF70D5005D8AEA /* Frameworks */,
+				16D87A421DDF7074005D8AEA /* FlashRuntimeExtensions.h */,
+				16D87A441DDF70EB005D8AEA /* FPANEUtils.h */,
+				162665341DEF73D10059128C /* FPANEUtils.m */,
 				16D87A361DDF6EAE005D8AEA /* AirLiveStream */,
+				16D87A431DDF70D5005D8AEA /* Frameworks */,
 				16D87A351DDF6EAE005D8AEA /* Products */,
+				9744E1C155E55238EE37C952 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +80,6 @@
 		16D87A361DDF6EAE005D8AEA /* AirLiveStream */ = {
 			isa = PBXGroup;
 			children = (
-				16D87A421DDF7074005D8AEA /* FlashRuntimeExtensions.h */,
-				16D87A441DDF70EB005D8AEA /* FPANEUtils.h */,
-				162665341DEF73D10059128C /* FPANEUtils.m */,
 				16D87A371DDF6EAE005D8AEA /* AirLiveStream.h */,
 				162665361DEF73EA0059128C /* AirLiveStream.m */,
 				1661AA681E008ADB0052CF26 /* BroadcastMenuViewController.h */,
@@ -86,8 +92,18 @@
 			isa = PBXGroup;
 			children = (
 				16D87A401DDF6F1F005D8AEA /* ReplayKit.framework */,
+				885364F12DBF1076D7B05B04 /* libPods-AirLiveStream.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9744E1C155E55238EE37C952 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDC61C8B11679BAF049868B5 /* Pods-AirLiveStream.debug.xcconfig */,
+				8ABAA0C8B5996CD9CB1BD22F /* Pods-AirLiveStream.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16D87A3D1DDF6EAE005D8AEA /* Build configuration list for PBXNativeTarget "AirLiveStream" */;
 			buildPhases = (
+				7304ABC3981ED15A113D95E9 /* [CP] Check Pods Manifest.lock */,
 				16D87A301DDF6EAE005D8AEA /* Sources */,
 				16D87A311DDF6EAE005D8AEA /* Frameworks */,
 				16D87A321DDF6EAE005D8AEA /* CopyFiles */,
+				2ED539D0D51EBD8D83F18967 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +158,39 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2ED539D0D51EBD8D83F18967 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirLiveStream/Pods-AirLiveStream-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7304ABC3981ED15A113D95E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		16D87A301DDF6EAE005D8AEA /* Sources */ = {
@@ -240,6 +291,7 @@
 		};
 		16D87A3E1DDF6EAE005D8AEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDC61C8B11679BAF049868B5 /* Pods-AirLiveStream.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -257,6 +309,7 @@
 		};
 		16D87A3F1DDF6EAE005D8AEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ABAA0C8B5996CD9CB1BD22F /* Pods-AirLiveStream.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
