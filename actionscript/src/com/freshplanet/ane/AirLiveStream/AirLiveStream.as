@@ -1,3 +1,18 @@
+/*
+ * Copyright 2017 FreshPlanet
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.freshplanet.ane.AirLiveStream {
 
     import flash.events.EventDispatcher;
@@ -7,14 +22,22 @@ package com.freshplanet.ane.AirLiveStream {
 
 	public class AirLiveStream extends EventDispatcher {
 
-        /**
-         *
-         * PUBLIC
-         *
+        // --------------------------------------------------------------------------------------//
+        //																						 //
+        // 									   PUBLIC API										 //
+        // 																						 //
+        // --------------------------------------------------------------------------------------//
+
+        public static var logEnabled:Boolean = false;
+
+        /** supported on iOS devices. */
+        public static function get isSupported():Boolean {
+            return _isIOS();// || _isAndroid();
+        }
+
+		/**
+		 * AirLiveStream instance
          */
-
-        public static var DEBUG_ENABLED:Boolean = false;
-
         public static function get instance():AirLiveStream {
 
             if (!_instance)
@@ -23,56 +46,86 @@ package com.freshplanet.ane.AirLiveStream {
             return _instance;
         }
 
-		public static function get isSupported():Boolean {
-			return _isIOS();// || _isAndroid();
-		}
-
+        /**
+         * Load broadcast
+         */
         public function loadBroadcast():void {
             _call("loadBroadcast");
         }
 
+        /**
+         * Start broadcast
+         */
         public function startBroadcast():void {
             _call("startBroadcast");
         }
 
+        /**
+         * Stop broadcast
+         */
         public function stopBroadcast():void {
             _call("stopBroadcast");
         }
 
+        /**
+         * Pause broadcast
+         */
         public function pauseBroadcast():void {
             _call("pauseBroadcast");
         }
 
+        /**
+         * Resume broadcast
+         */
         public function resumeBroadcast():void {
             _call("resumeBroadcast");
         }
 
-        public function isPaused():Boolean {
+		/**
+         * Is the broadcast paused
+         * @return
+         */
+        public function get isPaused():Boolean {
             return _call("isPaused");
         }
 
-        public function isBroadcasting():Boolean {
+        /**
+         * Is currently broadcasting
+         * @return
+         */
+        public function get isBroadcasting():Boolean {
             return _call("isBroadcasting");
         }
 
-        public function isMicrophoneEnabled():Boolean {
+        /**
+         * Is microphone enabled
+         * @return
+         */
+        public function get isMicrophoneEnabled():Boolean {
             return _call("isMicrophoneEnabled");
         }
 
-        public function setIsMicrophoneEnabled(enabled:Boolean):void {
+		/**
+         * Set isMicrophone enabled
+         * @param enabled
+         */
+        public function set isMicrophoneEnabled(enabled:Boolean):void {
             _call("setIsMicrophoneEnabled", enabled);
         }
 
-        /**
-         *
-         * PRIVATE
-         *
-         */
+        // --------------------------------------------------------------------------------------//
+        //																						 //
+        // 									 	PRIVATE API										 //
+        // 																						 //
+        // --------------------------------------------------------------------------------------//
 
         private static const EXTENSION_ID:String = "com.freshplanet.ane.AirLiveStream";
         private static var _instance:AirLiveStream = null;
-        private var _context:ExtensionContext;
+        private var _context:ExtensionContext = null;
 
+        /**
+         * "private" singleton constructor
+         */
         function AirLiveStream() {
 
             if (!_instance) {
@@ -91,7 +144,7 @@ package com.freshplanet.ane.AirLiveStream {
 
         private function _handleStatusEvent(event:StatusEvent):void {
 
-            if (DEBUG_ENABLED)
+            if (logEnabled)
                 trace("AirLiveStream", "EVENT", event.code, event.level);
 
             this.dispatchEvent(new AirLiveStreamEvent(event.code));
@@ -100,6 +153,9 @@ package com.freshplanet.ane.AirLiveStream {
         private function _call(functionName:String, ...vars):* {
 
             if (!_context)
+                return false;
+
+            if(!isSupported)
                 return false;
 
             var ret:Object = null;
