@@ -212,7 +212,7 @@ DEFINE_ANE_FUNCTION(startBroadcast) {
     AirLiveStream* controller = FPGetContextNativeData(context);
     
     if (!controller)
-        return FPANE_CreateError(@"context's AirLiveStream is null", 0);
+        return AirLiveStream_FPANE_CreateError(@"context's AirLiveStream is null", 0);
     
     [controller startBroadcast];
     
@@ -224,7 +224,7 @@ DEFINE_ANE_FUNCTION(stopBroadcast) {
     AirLiveStream* controller = FPGetContextNativeData(context);
     
     if (!controller)
-        return FPANE_CreateError(@"context's AirLiveStream is null", 0);
+        return AirLiveStream_FPANE_CreateError(@"context's AirLiveStream is null", 0);
     
     [controller stopBroadcast];
     
@@ -236,7 +236,7 @@ DEFINE_ANE_FUNCTION(pauseBroadcast) {
     AirLiveStream* controller = FPGetContextNativeData(context);
     
     if (!controller)
-        return FPANE_CreateError(@"context's AirLiveStream is null", 0);
+        return AirLiveStream_FPANE_CreateError(@"context's AirLiveStream is null", 0);
     
     [controller pauseBroadcast];
     
@@ -248,7 +248,7 @@ DEFINE_ANE_FUNCTION(resumeBroadcast) {
     AirLiveStream* controller = FPGetContextNativeData(context);
     
     if (!controller)
-        return FPANE_CreateError(@"context's AirLiveStream is null", 0);
+        return AirLiveStream_FPANE_CreateError(@"context's AirLiveStream is null", 0);
     
     [controller resumeBroadcast];
     
@@ -260,9 +260,9 @@ DEFINE_ANE_FUNCTION(isPaused) {
     AirLiveStream* controller = FPGetContextNativeData(context);
     
     if (!controller)
-        return FPANE_BOOLToFREObject(false);
+        return AirLiveStream_FPANE_BOOLToFREObject(false);
     
-    FREObject freObj = FPANE_BOOLToFREObject([controller isPaused]);
+    FREObject freObj = AirLiveStream_FPANE_BOOLToFREObject([controller isPaused]);
     
     return freObj;
 }
@@ -272,9 +272,9 @@ DEFINE_ANE_FUNCTION(isBroadcasting) {
     AirLiveStream* controller = FPGetContextNativeData(context);
     
     if (!controller)
-        return FPANE_BOOLToFREObject(false);
+        return AirLiveStream_FPANE_BOOLToFREObject(false);
     
-    FREObject freObj = FPANE_BOOLToFREObject([controller isBroadcasting]);
+    FREObject freObj = AirLiveStream_FPANE_BOOLToFREObject([controller isBroadcasting]);
     
     return freObj;
 }
@@ -282,14 +282,14 @@ DEFINE_ANE_FUNCTION(isBroadcasting) {
 DEFINE_ANE_FUNCTION(isMicrophoneEnabled) {
     
     BOOL enabled = [RPScreenRecorder sharedRecorder].microphoneEnabled;
-    FREObject freObj = FPANE_BOOLToFREObject(enabled);
+    FREObject freObj = AirLiveStream_FPANE_BOOLToFREObject(enabled);
     
     return freObj;
 }
 
 DEFINE_ANE_FUNCTION(setIsMicrophoneEnabled) {
     
-    BOOL enabled = FPANE_FREObjectToBool(argv[0]);
+    BOOL enabled = AirLiveStream_FPANE_FREObjectToBool(argv[0]);
     [RPScreenRecorder sharedRecorder].microphoneEnabled = enabled;
     
     return NULL;
@@ -298,14 +298,14 @@ DEFINE_ANE_FUNCTION(setIsMicrophoneEnabled) {
 DEFINE_ANE_FUNCTION(isCameraEnabled) {
     
     BOOL enabled = [RPScreenRecorder sharedRecorder].cameraEnabled;
-    FREObject freObj = FPANE_BOOLToFREObject(enabled);
+    FREObject freObj = AirLiveStream_FPANE_BOOLToFREObject(enabled);
     
     return freObj;
 }
 
 DEFINE_ANE_FUNCTION(setIsCameraEnabled) {
     
-    BOOL enabled = FPANE_FREObjectToBool(argv[0]);
+    BOOL enabled = AirLiveStream_FPANE_FREObjectToBool(argv[0]);
     [RPScreenRecorder sharedRecorder].cameraEnabled = enabled;
     
     return NULL;

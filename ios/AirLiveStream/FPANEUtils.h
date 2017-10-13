@@ -25,19 +25,19 @@
 
 #define ROOT_VIEW_CONTROLLER [[[UIApplication sharedApplication] keyWindow] rootViewController]
 
-void FPANE_DispatchEvent(FREContext context, NSString *eventName);
-void FPANE_DispatchEventWithInfo(FREContext context, NSString *eventName, NSString *eventInfo);
-void FPANE_Log(FREContext context, NSString *message);
+void AirLiveStream_FPANE_DispatchEvent(FREContext context, NSString *eventName);
+void AirLiveStream_FPANE_DispatchEventWithInfo(FREContext context, NSString *eventName, NSString *eventInfo);
+void AirLiveStream_FPANE_Log(FREContext context, NSString *message);
 
-NSString * FPANE_FREObjectToNSString(FREObject object);
-NSArray * FPANE_FREObjectToNSArrayOfNSString(FREObject object);
-NSDictionary * FPANE_FREObjectsToNSDictionaryOfNSString(FREObject keys, FREObject values);
-BOOL FPANE_FREObjectToBool(FREObject object);
-NSInteger FPANE_FREObjectToInt(FREObject object);
+NSString * AirLiveStream_FPANE_FREObjectToNSString(FREObject object);
+NSArray * AirLiveStream_FPANE_FREObjectToNSArrayOfNSString(FREObject object);
+NSDictionary * AirLiveStream_FPANE_FREObjectsToNSDictionaryOfNSString(FREObject keys, FREObject values);
+BOOL AirLiveStream_FPANE_FREObjectToBool(FREObject object);
+NSInteger AirLiveStream_FPANE_FREObjectToInt(FREObject object);
 
-FREObject FPANE_BOOLToFREObject(BOOL boolean);
-FREObject FPANE_IntToFREObject(NSInteger i);
-FREObject FPANE_DoubleToFREObject(double d);
-FREObject FPANE_NSStringToFREObject(NSString *string);
+FREObject AirLiveStream_FPANE_BOOLToFREObject(BOOL boolean);
+FREObject AirLiveStream_FPANE_IntToFREObject(NSInteger i);
+FREObject AirLiveStream_FPANE_DoubleToFREObject(double d);
+FREObject AirLiveStream_FPANE_NSStringToFREObject(NSString *string);
 
-FREObject FPANE_CreateError( NSString* error, NSInteger* id );
+FREObject AirLiveStream_FPANE_CreateError( NSString* error, NSInteger* id );
