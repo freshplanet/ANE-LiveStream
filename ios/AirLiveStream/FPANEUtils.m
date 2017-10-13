@@ -20,25 +20,25 @@
 
 #pragma mark - Dispatch events
 
-void FPANE_DispatchEvent(FREContext context, NSString *eventName)
+void AirLiveStream_FPANE_DispatchEvent(FREContext context, NSString *eventName)
 {
     FREDispatchStatusEventAsync(context, (const uint8_t *)[eventName UTF8String], (const uint8_t *)"");
 }
 
-void FPANE_DispatchEventWithInfo(FREContext context, NSString *eventName, NSString *eventInfo)
+void AirLiveStream_FPANE_DispatchEventWithInfo(FREContext context, NSString *eventName, NSString *eventInfo)
 {
     FREDispatchStatusEventAsync(context, (const uint8_t *)[eventName UTF8String], (const uint8_t *)[eventInfo UTF8String]);
 }
 
-void FPANE_Log(FREContext context, NSString *message)
+void AirLiveStream_FPANE_Log(FREContext context, NSString *message)
 {
-    FPANE_DispatchEventWithInfo(context, @"LOGGING", message);
+    AirLiveStream_FPANE_DispatchEventWithInfo(context, @"LOGGING", message);
 }
 
 
 #pragma mark - FREObject -> Obj-C
 
-NSString * FPANE_FREObjectToNSString(FREObject object)
+NSString * AirLiveStream_FPANE_FREObjectToNSString(FREObject object)
 {
     uint32_t stringLength;
     const uint8_t *string;
@@ -46,7 +46,7 @@ NSString * FPANE_FREObjectToNSString(FREObject object)
     return [NSString stringWithUTF8String:(char*)string];
 }
 
-NSArray * FPANE_FREObjectToNSArrayOfNSString(FREObject object)
+NSArray * AirLiveStream_FPANE_FREObjectToNSArrayOfNSString(FREObject object)
 {
     uint32_t arrayLength;
     FREGetArrayLength(object, &arrayLength);
@@ -73,7 +73,7 @@ NSArray * FPANE_FREObjectToNSArrayOfNSString(FREObject object)
     return [NSArray arrayWithArray:mutableArray];
 }
 
-NSDictionary * FPANE_FREObjectsToNSDictionaryOfNSString(FREObject keys, FREObject values)
+NSDictionary * AirLiveStream_FPANE_FREObjectsToNSDictionaryOfNSString(FREObject keys, FREObject values)
 {
     uint32_t numKeys, numValues;
     FREGetArrayLength(keys, &numKeys);
@@ -104,14 +104,14 @@ NSDictionary * FPANE_FREObjectsToNSDictionaryOfNSString(FREObject keys, FREObjec
     return [NSDictionary dictionaryWithDictionary:mutableDictionary];
 }
 
-BOOL FPANE_FREObjectToBool(FREObject object)
+BOOL AirLiveStream_FPANE_FREObjectToBool(FREObject object)
 {
     uint32_t b;
     FREGetObjectAsBool(object, &b);
     return b != 0;
 }
 
-NSInteger FPANE_FREObjectToInt(FREObject object)
+NSInteger AirLiveStream_FPANE_FREObjectToInt(FREObject object)
 {
     int32_t i;
     FREGetObjectAsInt32(object, &i);
@@ -121,35 +121,35 @@ NSInteger FPANE_FREObjectToInt(FREObject object)
 
 #pragma mark - Obj-C -> FREObject
 
-FREObject FPANE_BOOLToFREObject(BOOL boolean)
+FREObject AirLiveStream_FPANE_BOOLToFREObject(BOOL boolean)
 {
     FREObject result;
     FRENewObjectFromBool(boolean, &result);
     return result;
 }
 
-FREObject FPANE_IntToFREObject(NSInteger i)
+FREObject AirLiveStream_FPANE_IntToFREObject(NSInteger i)
 {
     FREObject result;
     FRENewObjectFromInt32((int32_t)i, &result);
     return result;
 }
 
-FREObject FPANE_DoubleToFREObject(double d)
+FREObject AirLiveStream_FPANE_DoubleToFREObject(double d)
 {
     FREObject result;
     FRENewObjectFromDouble(d, &result);
     return result;
 }
 
-FREObject FPANE_NSStringToFREObject(NSString *string)
+FREObject AirLiveStream_FPANE_NSStringToFREObject(NSString *string)
 {
     FREObject result;
     FRENewObjectFromUTF8((int)string.length, (const uint8_t *)[string UTF8String], &result);
     return result;
 }
 
-FREObject FPANE_CreateError( NSString* error, NSInteger* id )
+FREObject AirLiveStream_FPANE_CreateError( NSString* error, NSInteger* id )
 {
     FREObject ret;
     FREObject errorThrown;
@@ -157,7 +157,7 @@ FREObject FPANE_CreateError( NSString* error, NSInteger* id )
     FREObject freId;
     FRENewObjectFromInt32( (int32_t)*id, &freId);
     FREObject argV[] = {
-        FPANE_NSStringToFREObject(error),
+        AirLiveStream_FPANE_NSStringToFREObject(error),
         freId
     };
     FRENewObject((const uint8_t*)"Error", 2, argV, &ret, &errorThrown);
