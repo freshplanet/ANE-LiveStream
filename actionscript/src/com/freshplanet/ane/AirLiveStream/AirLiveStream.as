@@ -179,7 +179,7 @@ package com.freshplanet.ane.AirLiveStream {
         }
 
         private static function _isIOS():Boolean {
-            return Capabilities.manufacturer.indexOf("iOS") > -1 && _iOSVersion >= 10;
+			return Capabilities.manufacturer.indexOf("iOS") > -1 && Capabilities.os.indexOf("x86_64") < 0 && Capabilities.os.indexOf("i386") < 0 && _iOSVersion >= 10;
         }
 
         private static function get _iOSVersion():uint {
